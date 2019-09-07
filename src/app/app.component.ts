@@ -19,7 +19,7 @@ export class MyApp {
     public statusBar: StatusBar, 
     public splashScreen: SplashScreen,
     public auth: AuthService
-    ) {
+  ) {
     this.initializeApp();
 
     this.pages = [
@@ -27,7 +27,6 @@ export class MyApp {
       { title: 'Categorias', component: 'CategoriasPage' },
       { title: 'Logout', component: '' }
     ];
-
   }
 
   initializeApp() {
@@ -43,6 +42,7 @@ export class MyApp {
         this.auth.logout();
         this.nav.setRoot('HomePage');
         break;
+
       default:
         this.nav.setRoot(page.component);
     }
